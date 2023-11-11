@@ -1,2 +1,2 @@
-# DSLinkedList
- LinkedList is a linear data strcuture that each node references to the next nodes
+## Linked List
+Implemented by: Plipus Tel <a href="https://www.plipus.tel.com" target="_blank">https://www.plipustel.com</a><p>
