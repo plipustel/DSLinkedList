@@ -4,7 +4,7 @@
  *
  * @Author Plipus Tel <https://www.plipus.tel.com>
  * @Created May 20, 2012
- * @LastModified Nov 12, 2023
+ * @LastModified See in github log
  * 
  * @Defenition : Linked List is a list that has sequences of node/link/record
  *             where one link connect to the next link using one direction
