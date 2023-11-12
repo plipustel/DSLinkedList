@@ -2,7 +2,7 @@
  * @(#)linkedListApp.java
  *
  *
- * @Author Plipus Telaumbanua
+ * @Author Plipus Tel <https://www.plipus.tel.com>
  * @Created May 20, 2012
  * @LastModified Nov 12, 2023
  * 
