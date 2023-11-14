@@ -9,7 +9,8 @@
  * @Defenition : Linked List is a list that has sequences of node/link/record
  *             where one link connect to the next link using one direction
  *             pointer/reference. The last link always refers to NULL as the
- *             mark where the iteration will be stopped.
+ *             mark where the iteration will be stopped. Typically it faster insertion and deletion than
+ *			   array which take time complexity O(n) in worst case, LinkedList take Log(n) faster than array.
  */
 class Record {
 	public int stdNo;
