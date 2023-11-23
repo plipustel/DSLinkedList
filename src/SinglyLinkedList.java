@@ -2,9 +2,9 @@
  * Singly LinkedList
  *
  *
- * @Author Plipus Tel <https://www.plipus.tel.com>
- * @Created May 20, 2012
- * @LastModified See in github log
+ * @ImplementedBy: Plipus Tel <https://www.plipus.tel.com>
+ * @Created: May 20, 2012
+ * @LastModified: See in Github log
  * 
  * @Defenition : Linked List is a list that has sequences of node/link/record
  *             where one link connect to the next link using one direction
