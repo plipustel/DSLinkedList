@@ -18,9 +18,14 @@
  * [head] = A
  * [tail] = E
  * [nodes] = A,B,C,D,E
- * [link] = ->
+ * [link] = -> connect one node to another
+ * 
  * @AlgorithmToConstructLinkedList
  * 1. 
+ * 
+ * 
+ * @ExampleImplementation
+ * 1. Music Play List
  */
 
 
