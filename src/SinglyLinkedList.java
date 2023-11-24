@@ -13,7 +13,7 @@
  *      
  * @ExampleLinkedList:
  * 
- * A -> B -> C -> D -> E -> null
+ * [head] A -> B -> C -> D -> E [tail] -> null
  * 
  * [head] = A
  * [tail] = E
@@ -56,9 +56,11 @@ class Node {
 class NodeList {
 	
 	public Node head; /* Can also available accessed */
+	public Node tail;
 	
 	public NodeList() {
 		this.head = null;
+		this.tail = null;
 	}
 	
 	/* By default insertion is from left/head of nodes 
@@ -71,19 +73,45 @@ class NodeList {
 	 * 5.   newData.next = head 
 	 * */
 	public void constructLinkedList(int Key, String Name, String Email) {
+		
 		Node data = new Node(Key, Name, Email);
+	
+		/* for the 1st time, set the tail */
+		if(this.head == null) {
+			data.nextNode = this.tail;
+			this.tail = data;
+		}
+		
 		data.nextNode = this.head;	/* next node */
 		this.head = data;
+	}
+	
+	public boolean isEmpty() {
+		return (head == null);
+	}
+
+	public Node getHead() {
+		return head;
+	}
+	public Node getTail() {
+		return tail;
 	}
 	
 	public void printLinkedList() {
 		//System.out.println(head.nextNode.nextNode.name); // 2
 		
-		while(head != null) {
-			System.out.println(head.id + ", " + head.name + ", " + head.email);
-			head = head.nextNode;
+		if(isEmpty()) {
+			System.out.println("No Data");
+			return;
 		}
 		
+		while(head != null) {
+			System.out.println("+------------------------+");
+			System.out.println(head.id + "\n" + head.name + "\n" + head.email);
+			head = head.nextNode;
+			
+		}
+		System.out.println("+------------------------+");
 		
 		/* Alternatively, recursive call */
 		/*
@@ -97,12 +125,15 @@ class NodeList {
 		**/
 	}
 	
-	public void isEmpty() {
-		
-	}
 	
-	public void insertLast() {
-		
+	
+	public void insertLast(int Key, String Name, String Email) {
+		if(isEmpty()) {
+			System.out.println("No Data");
+			return;
+		}
+		Node data = new Node(Key, Name, Email);
+		this.tail.nextNode = data; 
 	}
 	
 	public void removeFirst() {
@@ -128,8 +159,10 @@ public class SinglyLinkedList {
 		HappyFamily.constructLinkedList(2, "Plipus", "plipus@plipustel.com");
 		HappyFamily.constructLinkedList(3, "Adam", "adam@plipustel.com");
 		
+		HappyFamily.insertLast(100, "Adam", "adam@plipustel.com");
 		
 		// System.out.println(HappyFamily.head.id); is also valid
+		System.out.println(HappyFamily.getTail().id);
 		HappyFamily.printLinkedList();
 	}
 
