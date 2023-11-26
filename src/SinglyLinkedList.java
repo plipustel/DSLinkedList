@@ -223,6 +223,14 @@ class NodeList {
 			current = current.nextNode;
 		}
 	}
+	
+	public void divide() {
+		
+	}
+	
+	public void conquer() {
+		
+	}
 }
 
 public class SinglyLinkedList {
