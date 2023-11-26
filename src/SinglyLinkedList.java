@@ -225,7 +225,6 @@ class NodeList {
 	}
 	
 	public void divide() {
-		
 	}
 	
 	public void conquer() {
