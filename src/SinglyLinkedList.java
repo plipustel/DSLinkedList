@@ -152,10 +152,6 @@ class NodeList {
 
 	}
 
-	public void removeNode(int Key) {
-
-	}
-
 	public int getLength() {
 		Node current = head;
 		int length = 0;
@@ -187,7 +183,7 @@ class NodeList {
 		return false;
 
 	}
-	
+
 	public Node getNode(int Key) {
 		Node current = head; /* make sure head is independent */
 
@@ -202,34 +198,42 @@ class NodeList {
 		return null;
 
 	}
-	
-	
-	/* Still not work */
-	public void sortLinkedList() {
-		
-		Node temp = head;
-		Node current = head; /* make sure head is independent */
-		Node previous = null;
 
-		
-		while (current != null ) {
-			previous = current;
-			System.out.println(previous.id + " vs " +current.id);
-			if(previous.id > current.id ) {
-				temp = current;
-				current = previous;
-				previous = temp;
+	/* Still not work, i'm trying to bubble it. To solve this problem, probably using doubly linked list
+	 * as it has 'prev' and 'next' lilink, linka  */
+	public void sortLinkedList() {
+
+		Node current = head; /* make sure head is independent */
+		Node temp = null;
+
+		int j = 0;
+		while (current != null) {
+
+			Node subcurrent = head; /* restart subcrrent */
+			while (subcurrent != null ) {
+				System.out.println(subcurrent.id);
+
+//				if (subcurrent.id > subcurrent.nextNode.id) {
+//					temp = subcurrent.nextNode;
+//					subcurrent.nextNode = subcurrent;
+//					subcurrent = temp;
+//					this.tail = subcurrent;
+//
+//				}
+				subcurrent = subcurrent.nextNode;
 			}
+
 			current = current.nextNode;
+			j++;
 		}
 	}
-	
+
 	public void divide() {
-		
+
 	}
-	
+
 	public void conquer() {
-		
+
 	}
 }
 
@@ -245,15 +249,15 @@ public class SinglyLinkedList {
 
 		HappyFamily.insertTail(101, "Adam1", "adam@plipustel.com");
 		HappyFamily.insertTail(102, "Adam2", "adam@plipustel.com");
-		HappyFamily.insertTail(103, "Adam3", "adam@plipustel.com");
+		HappyFamily.insertTail(104, "Adam3", "adam@plipustel.com");
 
-		HappyFamily.removeTail();
+		// HappyFamily.removeTail();
 
-		HappyFamily.insertTail(105, "Adam3", "adam@plipustel.com");
+		HappyFamily.insertTail(101, "Adam3", "adam@plipustel.com");
 		// HappyFamily.removeTail();
 
 		HappyFamily.sortLinkedList();
-		
+
 		// System.out.println(HappyFamily.getTail().name);
 		HappyFamily.printLinkedList();
 		// System.out.println(HappyFamily.head.id);
@@ -263,7 +267,7 @@ public class SinglyLinkedList {
 		}
 		System.out.println("Length:" + HappyFamily.getLength());
 
-		System.out.println( HappyFamily.getNode(2).id);
+		System.out.println(HappyFamily.getNode(2).id);
 
 	}
 
