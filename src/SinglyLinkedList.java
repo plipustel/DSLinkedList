@@ -70,13 +70,14 @@ class NodeList {
 		Node data = new Node(Key, Name, Email);
 
 		/* for the 1st time, set the tail */
-		if (this.head == null) {
-			data.nextNode = this.tail;
+		if (isEmpty()) {
+			this.head = data;
 			this.tail = data;
+			data.nextNode = null;
+		} else {
+			data.nextNode = this.head; /* next node */
+			this.head = data;
 		}
-
-		data.nextNode = this.head; /* next node */
-		this.head = data;
 	}
 
 	public boolean isEmpty() {
@@ -199,8 +200,10 @@ class NodeList {
 
 	}
 
-	/* Still not work, i'm trying to bubble it. To solve this problem, probably using doubly linked list
-	 * as it has 'prev' and 'next' lilink, linka  */
+	/*
+	 * Still not work, i'm trying to bubble it. To solve this problem, probably
+	 * using doubly linked list as it has 'prev' and 'next' lilink, linka
+	 */
 	public void sortLinkedList() {
 
 		Node current = head; /* make sure head is independent */
@@ -210,7 +213,7 @@ class NodeList {
 		while (current != null) {
 
 			Node subcurrent = head; /* restart subcrrent */
-			while (subcurrent != null ) {
+			while (subcurrent != null) {
 				System.out.println(subcurrent.id);
 
 //				if (subcurrent.id > subcurrent.nextNode.id) {
