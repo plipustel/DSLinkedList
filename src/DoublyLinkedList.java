@@ -58,16 +58,7 @@ class DoublyLilink {
 		}
 	}
 	
-	
-	public NodePerson getPrevNode(NodePerson current) {
-	
-		return current.prevNode;
-	}
-	
-	public NodePerson getNextNode(NodePerson current) {
-		
-		return current.nextNode;
-	}
+
 }
 
 public class DoublyLinkedList {
@@ -84,8 +75,6 @@ public class DoublyLinkedList {
 		HappyFamily.ConstructDoblyLilink(3, "Adam", "adam@plipustel.com"); /* head */
 		
 		HappyFamily.printDoublyLilink();
-		
-	//	System.out.println(HappyFamily.getPrevNode(1));
 		
 	}
 
